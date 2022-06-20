@@ -1,27 +1,19 @@
-import './App.css';
-import SecondPageA from './components/SecondPageA';
-import SecondPageB from './components/SecondPageB';
-import FirstPage from './components/FirstPage';
-import ThirdPage from './components/ThirdPage';
-import LastPage from './components/LastPage';
-import  { BrowserRouter   ,Routes,Route}from "react-router-dom";
+import LeftMenu from "./components/LeftMenu";
+import MainContainer from "./components/MainContainer";
+import RightMenu from "./components/RightMenu";
+import space from "./images/space.jpg";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
-    <div className="App">
-
-      <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<FirstPage/>}/> 
-        <Route  path="/secondPageA" element={<SecondPageA />} />
-        <Route  path="/secondPageB" element={<SecondPageB />} />
-        <Route  path="/thirdPage" element={<ThirdPage />} />
-        <Route  path="/lastPage" element={<LastPage />} />
-
-      </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <div className="app">
+        <img src={space} alt="" div className="img" />
+        <LeftMenu />
+        <MainContainer />
+        <RightMenu />
+      </div>
+    </>
   );
 }
-
-export default App;

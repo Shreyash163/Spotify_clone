@@ -1,0 +1,342 @@
+.leftMenu {
+  z-index: 1;
+  width: 250px;
+  height: 100%;
+  min-height: 100vh;
+  top: 0%;
+  left: 0%;
+  background: rgba(22, 22, 22, 0.442);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  padding-left: 10px;
+
+  padding-right: 10px;
+}
+
+.logoContainer {
+  padding: 15px 25px;
+  font-family: "Varela Round", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spotify {
+  color: #cecccc;
+}
+
+.logoContainer i {
+  margin-left: 60px;
+}
+
+.searchbox {
+  height: 45px;
+  width: 100%;
+  margin-top: -30px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 10px;
+}
+
+.searchbox input {
+  height: 80%;
+  width: 200px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding-left: 40px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+
+.searchbox .searchIcon {
+  position: absolute;
+  top: 0;
+  padding-left: 20px;
+  left: 0;
+  color: #848484;
+  width: 45px;
+  height: 45px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.MenuContainer {
+}
+
+.MenuContainer .title {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+.MenuContainer .ul {
+  padding: 0;
+}
+
+.MenuContainer ul li {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  margin-left: -25px;
+  position: relative;
+}
+
+.MenuContainer ul li a {
+  text-decoration: none;
+  color: #848484;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.MenuContainer ul li i {
+  margin-right: 15px;
+  font-size: 17px;
+}
+
+.MenuContainer ul li:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  background: chartreuse;
+  left: -18px;
+  width: 0px;
+  height: 100%;
+  border-radius: 30px;
+}
+.MenuContainer ul li:hover::before,
+.MenuContainer ul li.active::before {
+  width: 5px;
+  transition-duration: 0.3s;
+}
+
+.MenuContainer ul li:hover a,
+.MenuContainer ul li.active a {
+  color: #f1f1f1;
+  transition-duration: 0.3s;
+}
+
+.playListContainer {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.playListContainer .nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+.playListContainer .nameContainer p {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.playListContainer .nameContainer i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.playListContainer .playListScroll {
+  height: 140px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.playListContainer .playListScroll .playList {
+  display: flex;
+  color: #848484;
+  align-items: center;
+  margin-top: -15px;
+  justify-content: space-between;
+}
+
+.playListContainer .playListScroll .playList:hover {
+  color: #f1f1f1;
+  transition-duration: 0.3s;
+}
+
+.playListContainer .playListScroll .playList i {
+  font-size: 18px;
+}
+
+.playListContainer .playListScroll .playList .list {
+  margin-right: 15px;
+}
+
+.playListContainer .playListScroll .playList .trash {
+  margin-left: auto;
+}
+
+.playListContainer .playListScroll .playList p {
+  text-overflow: ellipsis;
+  font-size: 16px;
+  overflow: hidden;
+  display: inline;
+}
+
+.trackList {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.trackList .top {
+  display: flex;
+  align-items: center;
+}
+
+.trackList .top img {
+  width: 50px !important ;
+}
+
+.trackList .top .trackName {
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+.trackList .top .trackName .trackSpan {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.384);
+}
+
+.trackList .bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #848484;
+  justify-content: space-between;
+}
+
+.trackList .bottom i {
+  font-size: 19px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+/* 
+.trackList .bottom .Fadesktop{
+  margin-left:7px;
+}  */
+
+.trackList .bottom i:hover {
+  color: #f1f1f1;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.trackList .bottom input {
+  width: 110px;
+  position: relative;
+  height: 5px;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.trackList .bottom input::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #49e12e;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+.trackList .bottom input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+  transition: all 250ms linear;
+  background: #f1f1f1;
+}
+
+.image {
+  margin-left: 15px;
+}
+
+.image img {
+  width: 190px;
+  height: 190px;
+  margin-left: 5px;
+  border-radius: 100px;
+}
+
+.image img:hover {
+  /* border: 8px solid #49e12e; */
+  width: 190px;
+  height: 190px;
+  margin-left: 5px;
+  border-radius: 100px;
+  transition-duration: 0.5s;
+  -moz-box-shadow: 0 0 20px #240046;
+  -webkit-box-shadow: 0 0 20px #240046;
+  box-shadow: 0px 0px 20px #bbd0ff;
+}
+
+@media screen and (max-width: 550px) {
+  .leftMenu {
+    min-width: 84px;
+    width: 64px;
+  }
+
+  .leftMenu .searchbox {
+    display: none;
+  }
+
+  .leftMenu .trackList {
+    display: none;
+  }
+
+  .leftMenu .logoContainer i {
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+  .leftMenu .logoContainer .spotify {
+    display: none;
+  }
+
+  .leftMenu .image {
+    display: none;
+  }
+  .leftMenu .playListContainer {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a span {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a i {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+  .leftMenu .MenuContainer ul li {
+    margin-left: -20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
